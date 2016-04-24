@@ -30,8 +30,9 @@ Partial Class Form1
         Me.ButtonCMD = New System.Windows.Forms.Button()
         Me.ButtonPowershell = New System.Windows.Forms.Button()
         Me.ButtonFileExplorer = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ButtonCustom = New System.Windows.Forms.Button()
+        Me.ButtonReboot = New System.Windows.Forms.Button()
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.SuspendLayout()
         '
         'ButtonSettings
@@ -111,31 +112,31 @@ Partial Class Form1
         Me.ButtonToolTip.SetToolTip(Me.ButtonFileExplorer, "A43 File Explorer")
         Me.ButtonFileExplorer.UseVisualStyleBackColor = False
         '
-        'Button1
+        'ButtonCustom
         '
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(0, 180)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(36, 36)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Tag = ""
-        Me.ButtonToolTip.SetToolTip(Me.Button1, "Settings")
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.ButtonCustom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.ButtonCustom.Image = CType(resources.GetObject("ButtonCustom.Image"), System.Drawing.Image)
+        Me.ButtonCustom.Location = New System.Drawing.Point(0, 180)
+        Me.ButtonCustom.Margin = New System.Windows.Forms.Padding(0)
+        Me.ButtonCustom.Name = "ButtonCustom"
+        Me.ButtonCustom.Size = New System.Drawing.Size(36, 36)
+        Me.ButtonCustom.TabIndex = 5
+        Me.ButtonCustom.Tag = ""
+        Me.ButtonToolTip.SetToolTip(Me.ButtonCustom, "Custom")
+        Me.ButtonCustom.UseVisualStyleBackColor = False
         '
-        'Button2
+        'ButtonReboot
         '
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(0, 216)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(36, 36)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Tag = ""
-        Me.ButtonToolTip.SetToolTip(Me.Button2, "Settings")
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.ButtonReboot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.ButtonReboot.Image = CType(resources.GetObject("ButtonReboot.Image"), System.Drawing.Image)
+        Me.ButtonReboot.Location = New System.Drawing.Point(0, 216)
+        Me.ButtonReboot.Margin = New System.Windows.Forms.Padding(0)
+        Me.ButtonReboot.Name = "ButtonReboot"
+        Me.ButtonReboot.Size = New System.Drawing.Size(36, 36)
+        Me.ButtonReboot.TabIndex = 6
+        Me.ButtonReboot.Tag = ""
+        Me.ButtonToolTip.SetToolTip(Me.ButtonReboot, "Reboot")
+        Me.ButtonReboot.UseVisualStyleBackColor = False
         '
         'Form1
         '
@@ -144,8 +145,8 @@ Partial Class Form1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(36, 252)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ButtonReboot)
+        Me.Controls.Add(Me.ButtonCustom)
         Me.Controls.Add(Me.ButtonFileExplorer)
         Me.Controls.Add(Me.ButtonPowershell)
         Me.Controls.Add(Me.ButtonCMD)
@@ -173,6 +174,7 @@ Partial Class Form1
     Friend WithEvents ButtonCMD As Button
     Friend WithEvents ButtonPowershell As Button
     Friend WithEvents ButtonFileExplorer As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents ButtonCustom As Button
+    Friend WithEvents ButtonReboot As Button
+    Friend WithEvents ColorDialog1 As ColorDialog
 End Class
