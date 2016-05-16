@@ -24,33 +24,35 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.ButtonSettings = New System.Windows.Forms.Button()
+        Me.Button_Settings = New System.Windows.Forms.Button()
         Me.ButtonToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.ButtonFirefox = New System.Windows.Forms.Button()
-        Me.ButtonCMD = New System.Windows.Forms.Button()
-        Me.ButtonPowershell = New System.Windows.Forms.Button()
-        Me.ButtonFileExplorer = New System.Windows.Forms.Button()
-        Me.ButtonTaskmgr = New System.Windows.Forms.Button()
-        Me.ButtonReboot = New System.Windows.Forms.Button()
-        Me.ButtonChrome = New System.Windows.Forms.Button()
-        Me.ButtonRegedit = New System.Windows.Forms.Button()
-        Me.ButtonLogoff = New System.Windows.Forms.Button()
+        Me.Button_Firefox = New System.Windows.Forms.Button()
+        Me.Button_CMD = New System.Windows.Forms.Button()
+        Me.Button_Powershell = New System.Windows.Forms.Button()
+        Me.Button_FileExplorer = New System.Windows.Forms.Button()
+        Me.Button_Taskmgr = New System.Windows.Forms.Button()
+        Me.Button_Reboot = New System.Windows.Forms.Button()
+        Me.Button_Chrome = New System.Windows.Forms.Button()
+        Me.Button_Regedit = New System.Windows.Forms.Button()
+        Me.Button_Logoff = New System.Windows.Forms.Button()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.AllwaysOnTopTimer = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
-        'ButtonSettings
+        'Button_Settings
         '
-        Me.ButtonSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ButtonSettings.Image = CType(resources.GetObject("ButtonSettings.Image"), System.Drawing.Image)
-        Me.ButtonSettings.Location = New System.Drawing.Point(0, 0)
-        Me.ButtonSettings.Margin = New System.Windows.Forms.Padding(0)
-        Me.ButtonSettings.Name = "ButtonSettings"
-        Me.ButtonSettings.Size = New System.Drawing.Size(36, 36)
-        Me.ButtonSettings.TabIndex = 0
-        Me.ButtonSettings.Tag = ""
-        Me.ButtonToolTip.SetToolTip(Me.ButtonSettings, "Settings")
-        Me.ButtonSettings.UseVisualStyleBackColor = False
+        Me.Button_Settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_Settings.Enabled = False
+        Me.Button_Settings.Image = CType(resources.GetObject("Button_Settings.Image"), System.Drawing.Image)
+        Me.Button_Settings.Location = New System.Drawing.Point(0, 72)
+        Me.Button_Settings.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button_Settings.Name = "Button_Settings"
+        Me.Button_Settings.Size = New System.Drawing.Size(36, 36)
+        Me.Button_Settings.TabIndex = 0
+        Me.Button_Settings.Tag = ""
+        Me.ButtonToolTip.SetToolTip(Me.Button_Settings, "Settings")
+        Me.Button_Settings.UseVisualStyleBackColor = False
+        Me.Button_Settings.Visible = False
         '
         'ButtonToolTip
         '
@@ -64,122 +66,136 @@ Partial Class Form1
         Me.ButtonToolTip.UseAnimation = False
         Me.ButtonToolTip.UseFading = False
         '
-        'ButtonFirefox
+        'Button_Firefox
         '
-        Me.ButtonFirefox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ButtonFirefox.Image = CType(resources.GetObject("ButtonFirefox.Image"), System.Drawing.Image)
-        Me.ButtonFirefox.Location = New System.Drawing.Point(0, 36)
-        Me.ButtonFirefox.Margin = New System.Windows.Forms.Padding(0)
-        Me.ButtonFirefox.Name = "ButtonFirefox"
-        Me.ButtonFirefox.Size = New System.Drawing.Size(36, 36)
-        Me.ButtonFirefox.TabIndex = 1
-        Me.ButtonFirefox.Tag = ""
-        Me.ButtonToolTip.SetToolTip(Me.ButtonFirefox, "Firefox")
-        Me.ButtonFirefox.UseVisualStyleBackColor = True
+        Me.Button_Firefox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_Firefox.Enabled = False
+        Me.Button_Firefox.Image = CType(resources.GetObject("Button_Firefox.Image"), System.Drawing.Image)
+        Me.Button_Firefox.Location = New System.Drawing.Point(0, 108)
+        Me.Button_Firefox.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button_Firefox.Name = "Button_Firefox"
+        Me.Button_Firefox.Size = New System.Drawing.Size(36, 36)
+        Me.Button_Firefox.TabIndex = 1
+        Me.Button_Firefox.Tag = ""
+        Me.ButtonToolTip.SetToolTip(Me.Button_Firefox, "Firefox")
+        Me.Button_Firefox.UseVisualStyleBackColor = True
+        Me.Button_Firefox.Visible = False
         '
-        'ButtonCMD
+        'Button_CMD
         '
-        Me.ButtonCMD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ButtonCMD.Image = CType(resources.GetObject("ButtonCMD.Image"), System.Drawing.Image)
-        Me.ButtonCMD.Location = New System.Drawing.Point(0, 108)
-        Me.ButtonCMD.Margin = New System.Windows.Forms.Padding(0)
-        Me.ButtonCMD.Name = "ButtonCMD"
-        Me.ButtonCMD.Size = New System.Drawing.Size(36, 36)
-        Me.ButtonCMD.TabIndex = 3
-        Me.ButtonCMD.Tag = ""
-        Me.ButtonToolTip.SetToolTip(Me.ButtonCMD, "Command Line")
-        Me.ButtonCMD.UseVisualStyleBackColor = False
+        Me.Button_CMD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_CMD.Enabled = False
+        Me.Button_CMD.Image = CType(resources.GetObject("Button_CMD.Image"), System.Drawing.Image)
+        Me.Button_CMD.Location = New System.Drawing.Point(0, 180)
+        Me.Button_CMD.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button_CMD.Name = "Button_CMD"
+        Me.Button_CMD.Size = New System.Drawing.Size(36, 36)
+        Me.Button_CMD.TabIndex = 3
+        Me.Button_CMD.Tag = ""
+        Me.ButtonToolTip.SetToolTip(Me.Button_CMD, "Command Line")
+        Me.Button_CMD.UseVisualStyleBackColor = False
+        Me.Button_CMD.Visible = False
         '
-        'ButtonPowershell
+        'Button_Powershell
         '
-        Me.ButtonPowershell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ButtonPowershell.Image = CType(resources.GetObject("ButtonPowershell.Image"), System.Drawing.Image)
-        Me.ButtonPowershell.Location = New System.Drawing.Point(0, 144)
-        Me.ButtonPowershell.Margin = New System.Windows.Forms.Padding(0)
-        Me.ButtonPowershell.Name = "ButtonPowershell"
-        Me.ButtonPowershell.Size = New System.Drawing.Size(36, 36)
-        Me.ButtonPowershell.TabIndex = 4
-        Me.ButtonPowershell.Tag = ""
-        Me.ButtonToolTip.SetToolTip(Me.ButtonPowershell, "Powershell")
-        Me.ButtonPowershell.UseVisualStyleBackColor = False
+        Me.Button_Powershell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_Powershell.Enabled = False
+        Me.Button_Powershell.Image = CType(resources.GetObject("Button_Powershell.Image"), System.Drawing.Image)
+        Me.Button_Powershell.Location = New System.Drawing.Point(0, 216)
+        Me.Button_Powershell.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button_Powershell.Name = "Button_Powershell"
+        Me.Button_Powershell.Size = New System.Drawing.Size(36, 36)
+        Me.Button_Powershell.TabIndex = 4
+        Me.Button_Powershell.Tag = ""
+        Me.ButtonToolTip.SetToolTip(Me.Button_Powershell, "Powershell")
+        Me.Button_Powershell.UseVisualStyleBackColor = False
+        Me.Button_Powershell.Visible = False
         '
-        'ButtonFileExplorer
+        'Button_FileExplorer
         '
-        Me.ButtonFileExplorer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ButtonFileExplorer.Image = CType(resources.GetObject("ButtonFileExplorer.Image"), System.Drawing.Image)
-        Me.ButtonFileExplorer.Location = New System.Drawing.Point(0, 180)
-        Me.ButtonFileExplorer.Margin = New System.Windows.Forms.Padding(0)
-        Me.ButtonFileExplorer.Name = "ButtonFileExplorer"
-        Me.ButtonFileExplorer.Size = New System.Drawing.Size(36, 36)
-        Me.ButtonFileExplorer.TabIndex = 5
-        Me.ButtonFileExplorer.Tag = ""
-        Me.ButtonToolTip.SetToolTip(Me.ButtonFileExplorer, "A43 File Explorer")
-        Me.ButtonFileExplorer.UseVisualStyleBackColor = False
+        Me.Button_FileExplorer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_FileExplorer.Enabled = False
+        Me.Button_FileExplorer.Image = CType(resources.GetObject("Button_FileExplorer.Image"), System.Drawing.Image)
+        Me.Button_FileExplorer.Location = New System.Drawing.Point(0, 252)
+        Me.Button_FileExplorer.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button_FileExplorer.Name = "Button_FileExplorer"
+        Me.Button_FileExplorer.Size = New System.Drawing.Size(36, 36)
+        Me.Button_FileExplorer.TabIndex = 5
+        Me.Button_FileExplorer.Tag = ""
+        Me.ButtonToolTip.SetToolTip(Me.Button_FileExplorer, "A43 File Explorer")
+        Me.Button_FileExplorer.UseVisualStyleBackColor = False
+        Me.Button_FileExplorer.Visible = False
         '
-        'ButtonTaskmgr
+        'Button_Taskmgr
         '
-        Me.ButtonTaskmgr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ButtonTaskmgr.Image = CType(resources.GetObject("ButtonTaskmgr.Image"), System.Drawing.Image)
-        Me.ButtonTaskmgr.Location = New System.Drawing.Point(0, 216)
-        Me.ButtonTaskmgr.Margin = New System.Windows.Forms.Padding(0)
-        Me.ButtonTaskmgr.Name = "ButtonTaskmgr"
-        Me.ButtonTaskmgr.Size = New System.Drawing.Size(36, 36)
-        Me.ButtonTaskmgr.TabIndex = 6
-        Me.ButtonTaskmgr.Tag = ""
-        Me.ButtonToolTip.SetToolTip(Me.ButtonTaskmgr, "Task Manager")
-        Me.ButtonTaskmgr.UseVisualStyleBackColor = False
+        Me.Button_Taskmgr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_Taskmgr.Enabled = False
+        Me.Button_Taskmgr.Image = CType(resources.GetObject("Button_Taskmgr.Image"), System.Drawing.Image)
+        Me.Button_Taskmgr.Location = New System.Drawing.Point(0, 288)
+        Me.Button_Taskmgr.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button_Taskmgr.Name = "Button_Taskmgr"
+        Me.Button_Taskmgr.Size = New System.Drawing.Size(36, 36)
+        Me.Button_Taskmgr.TabIndex = 6
+        Me.Button_Taskmgr.Tag = ""
+        Me.ButtonToolTip.SetToolTip(Me.Button_Taskmgr, "Task Manager")
+        Me.Button_Taskmgr.UseVisualStyleBackColor = False
+        Me.Button_Taskmgr.Visible = False
         '
-        'ButtonReboot
+        'Button_Reboot
         '
-        Me.ButtonReboot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ButtonReboot.Image = CType(resources.GetObject("ButtonReboot.Image"), System.Drawing.Image)
-        Me.ButtonReboot.Location = New System.Drawing.Point(0, 324)
-        Me.ButtonReboot.Margin = New System.Windows.Forms.Padding(0)
-        Me.ButtonReboot.Name = "ButtonReboot"
-        Me.ButtonReboot.Size = New System.Drawing.Size(36, 36)
-        Me.ButtonReboot.TabIndex = 9
-        Me.ButtonReboot.Tag = ""
-        Me.ButtonToolTip.SetToolTip(Me.ButtonReboot, "Reboot")
-        Me.ButtonReboot.UseVisualStyleBackColor = False
+        Me.Button_Reboot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_Reboot.Image = CType(resources.GetObject("Button_Reboot.Image"), System.Drawing.Image)
+        Me.Button_Reboot.Location = New System.Drawing.Point(0, 36)
+        Me.Button_Reboot.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button_Reboot.Name = "Button_Reboot"
+        Me.Button_Reboot.Size = New System.Drawing.Size(36, 36)
+        Me.Button_Reboot.TabIndex = 1
+        Me.Button_Reboot.Tag = ""
+        Me.ButtonToolTip.SetToolTip(Me.Button_Reboot, "Reboot")
+        Me.Button_Reboot.UseVisualStyleBackColor = False
         '
-        'ButtonChrome
+        'Button_Chrome
         '
-        Me.ButtonChrome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ButtonChrome.Image = CType(resources.GetObject("ButtonChrome.Image"), System.Drawing.Image)
-        Me.ButtonChrome.Location = New System.Drawing.Point(0, 72)
-        Me.ButtonChrome.Margin = New System.Windows.Forms.Padding(0)
-        Me.ButtonChrome.Name = "ButtonChrome"
-        Me.ButtonChrome.Size = New System.Drawing.Size(36, 36)
-        Me.ButtonChrome.TabIndex = 2
-        Me.ButtonChrome.Tag = ""
-        Me.ButtonToolTip.SetToolTip(Me.ButtonChrome, "Chrome")
-        Me.ButtonChrome.UseVisualStyleBackColor = False
+        Me.Button_Chrome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_Chrome.Enabled = False
+        Me.Button_Chrome.Image = CType(resources.GetObject("Button_Chrome.Image"), System.Drawing.Image)
+        Me.Button_Chrome.Location = New System.Drawing.Point(0, 144)
+        Me.Button_Chrome.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button_Chrome.Name = "Button_Chrome"
+        Me.Button_Chrome.Size = New System.Drawing.Size(36, 36)
+        Me.Button_Chrome.TabIndex = 2
+        Me.Button_Chrome.Tag = ""
+        Me.ButtonToolTip.SetToolTip(Me.Button_Chrome, "Chrome")
+        Me.Button_Chrome.UseVisualStyleBackColor = False
+        Me.Button_Chrome.Visible = False
         '
-        'ButtonRegedit
+        'Button_Regedit
         '
-        Me.ButtonRegedit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ButtonRegedit.Image = CType(resources.GetObject("ButtonRegedit.Image"), System.Drawing.Image)
-        Me.ButtonRegedit.Location = New System.Drawing.Point(0, 252)
-        Me.ButtonRegedit.Margin = New System.Windows.Forms.Padding(0)
-        Me.ButtonRegedit.Name = "ButtonRegedit"
-        Me.ButtonRegedit.Size = New System.Drawing.Size(36, 36)
-        Me.ButtonRegedit.TabIndex = 7
-        Me.ButtonRegedit.Tag = ""
-        Me.ButtonToolTip.SetToolTip(Me.ButtonRegedit, "Regedit")
-        Me.ButtonRegedit.UseVisualStyleBackColor = False
+        Me.Button_Regedit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_Regedit.Enabled = False
+        Me.Button_Regedit.Image = CType(resources.GetObject("Button_Regedit.Image"), System.Drawing.Image)
+        Me.Button_Regedit.Location = New System.Drawing.Point(0, 324)
+        Me.Button_Regedit.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button_Regedit.Name = "Button_Regedit"
+        Me.Button_Regedit.Size = New System.Drawing.Size(36, 36)
+        Me.Button_Regedit.TabIndex = 7
+        Me.Button_Regedit.Tag = ""
+        Me.ButtonToolTip.SetToolTip(Me.Button_Regedit, "Regedit")
+        Me.Button_Regedit.UseVisualStyleBackColor = False
+        Me.Button_Regedit.Visible = False
         '
-        'ButtonLogoff
+        'Button_Logoff
         '
-        Me.ButtonLogoff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ButtonLogoff.Image = CType(resources.GetObject("ButtonLogoff.Image"), System.Drawing.Image)
-        Me.ButtonLogoff.Location = New System.Drawing.Point(0, 288)
-        Me.ButtonLogoff.Margin = New System.Windows.Forms.Padding(0)
-        Me.ButtonLogoff.Name = "ButtonLogoff"
-        Me.ButtonLogoff.Size = New System.Drawing.Size(36, 36)
-        Me.ButtonLogoff.TabIndex = 8
-        Me.ButtonLogoff.Tag = ""
-        Me.ButtonToolTip.SetToolTip(Me.ButtonLogoff, "Logoff")
-        Me.ButtonLogoff.UseVisualStyleBackColor = False
+        Me.Button_Logoff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button_Logoff.Image = CType(resources.GetObject("Button_Logoff.Image"), System.Drawing.Image)
+        Me.Button_Logoff.Location = New System.Drawing.Point(0, 0)
+        Me.Button_Logoff.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button_Logoff.Name = "Button_Logoff"
+        Me.Button_Logoff.Size = New System.Drawing.Size(36, 36)
+        Me.Button_Logoff.TabIndex = 0
+        Me.Button_Logoff.Tag = ""
+        Me.ButtonToolTip.SetToolTip(Me.Button_Logoff, "Logoff")
+        Me.Button_Logoff.UseVisualStyleBackColor = False
         '
         'AllwaysOnTopTimer
         '
@@ -193,16 +209,16 @@ Partial Class Form1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(36, 360)
         Me.ControlBox = False
-        Me.Controls.Add(Me.ButtonLogoff)
-        Me.Controls.Add(Me.ButtonRegedit)
-        Me.Controls.Add(Me.ButtonChrome)
-        Me.Controls.Add(Me.ButtonReboot)
-        Me.Controls.Add(Me.ButtonTaskmgr)
-        Me.Controls.Add(Me.ButtonFileExplorer)
-        Me.Controls.Add(Me.ButtonPowershell)
-        Me.Controls.Add(Me.ButtonCMD)
-        Me.Controls.Add(Me.ButtonFirefox)
-        Me.Controls.Add(Me.ButtonSettings)
+        Me.Controls.Add(Me.Button_Logoff)
+        Me.Controls.Add(Me.Button_Regedit)
+        Me.Controls.Add(Me.Button_Chrome)
+        Me.Controls.Add(Me.Button_Reboot)
+        Me.Controls.Add(Me.Button_Taskmgr)
+        Me.Controls.Add(Me.Button_FileExplorer)
+        Me.Controls.Add(Me.Button_Powershell)
+        Me.Controls.Add(Me.Button_CMD)
+        Me.Controls.Add(Me.Button_Firefox)
+        Me.Controls.Add(Me.Button_Settings)
         Me.Cursor = System.Windows.Forms.Cursors.Cross
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
@@ -219,17 +235,17 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents ButtonSettings As Button
+    Friend WithEvents Button_Settings As Button
     Friend WithEvents ButtonToolTip As ToolTip
-    Friend WithEvents ButtonFirefox As Button
-    Friend WithEvents ButtonCMD As Button
-    Friend WithEvents ButtonPowershell As Button
-    Friend WithEvents ButtonFileExplorer As Button
-    Friend WithEvents ButtonTaskmgr As Button
-    Friend WithEvents ButtonReboot As Button
+    Friend WithEvents Button_Firefox As Button
+    Friend WithEvents Button_CMD As Button
+    Friend WithEvents Button_Powershell As Button
+    Friend WithEvents Button_FileExplorer As Button
+    Friend WithEvents Button_Taskmgr As Button
+    Friend WithEvents Button_Reboot As Button
     Friend WithEvents ColorDialog1 As ColorDialog
-    Friend WithEvents ButtonChrome As Button
-    Friend WithEvents ButtonRegedit As Button
-    Friend WithEvents ButtonLogoff As Button
+    Friend WithEvents Button_Chrome As Button
+    Friend WithEvents Button_Regedit As Button
+    Friend WithEvents Button_Logoff As Button
     Friend WithEvents AllwaysOnTopTimer As Timer
 End Class

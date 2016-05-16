@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ButtonSettings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Button_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAArBJREFUWEfFl8muYiEQhn1k53mIRo3u1a0m+hL6ArpyWjs9he6k89FU9/GA5wqd
@@ -139,7 +139,7 @@
   <metadata name="ButtonToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="ButtonFirefox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Button_Firefox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAC0JJREFUWEet
         VwdUVVcWPe93/v/Ap6lUQYiCgAoIdsQSC8aCJsaCBUUwxIQisWHFNvZeI1hjFDUYRRENRMwgoiLWqEFR
@@ -193,7 +193,7 @@
         zit5AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="ButtonCMD.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Button_CMD.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAABwtJREFUWEe1
         V1lMVEkUxTGTmURnJlFQkM0FaUBcwI1udhWVRpBVhTQi7ruisowo7QZoXKLRqLhFRmOM0Qi4AqMwmQbl
@@ -229,7 +229,7 @@
         weMWMAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="ButtonPowershell.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Button_Powershell.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAB3ZJREFUWEftldlTW+cZh/sf1Elad9pxWzfGLDZeMAicmUyTNum46YUv0mlaT27i
@@ -267,7 +267,7 @@
         voB/AarmkVnb4JzkAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="ButtonFileExplorer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Button_FileExplorer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGOfPtRkwAAACBjSFJNAACH
         DwAAjA8AAP1SAACBQAAAfXkAAOmLAAA85QAAGcxzPIV3AAAKOWlDQ1BQaG90b3Nob3AgSUNDIHByb2Zp
@@ -371,7 +371,7 @@
         xEZ0qpmyooUsaiHL/jpPnMtaxpOMjBTj5P+rQnIfMfQgFP8PP/43S/KSPHcAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="ButtonTaskmgr.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Button_Taskmgr.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAe2SURBVFhHxZdZbFTnFcfz0D5W6ksiVXlqAyUUqMHL
@@ -410,7 +410,7 @@
         iA/YDT+SlRCzmClezb7Zz4veWFdOeOm/5oSZzjGLr0wAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="ButtonReboot.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Button_Reboot.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAAatJREFUWEe9lgGRhDAMRZGAhJWAFCQgAQVYQAoSkIAEJCCBvcdceiEEaOnevpnM
@@ -423,7 +423,7 @@
         Y7zDJyaxEC3Ag0T8SXPIEpDPur4BkMoMXiB+0lIAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="ButtonChrome.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Button_Chrome.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAACCRJREFUWEfVlnlUlNcZxvtHT5uYaE3UNBE0bOICiEYdUfYZZgVcyHG3Jza4Jdal
@@ -464,7 +464,7 @@
         N/QfX9mfAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="ButtonRegedit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Button_Regedit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAA5VJREFUWEe1l0tME1EUhrtz4cK4YaMrNcaNrkxMfC1MdCMxxoUxMcZo3LAwhsSo
@@ -485,7 +485,7 @@
         fHQoiTbhpfIKxhfLjPQrSVxH49cxnhfX8X9B8AL4B17H7YfHT1OtAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="ButtonLogoff.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Button_Logoff.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJ8SURBVFhHzZbb
