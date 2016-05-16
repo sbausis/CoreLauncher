@@ -1,4 +1,5 @@
 ﻿Public Class Form1
+
     Private Sub ButtonFirefox_Click(sender As Object, e As EventArgs) Handles ButtonFirefox.Click
         Dim startInfo As New ProcessStartInfo
         startInfo.FileName = "C:\Program Files\FirefoxPortable\FirefoxPortable.exe"
@@ -86,4 +87,7 @@
         End If
     End Sub
 
+    Private Sub AllwaysOnTopTimer_Tick(sender As Object, e As EventArgs) Handles AllwaysOnTopTimer.Tick
+        Me.TopMost = True
+    End Sub
 End Class

@@ -36,6 +36,7 @@ Partial Class Form1
         Me.ButtonRegedit = New System.Windows.Forms.Button()
         Me.ButtonLogoff = New System.Windows.Forms.Button()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.AllwaysOnTopTimer = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'ButtonSettings
@@ -180,6 +181,11 @@ Partial Class Form1
         Me.ButtonToolTip.SetToolTip(Me.ButtonLogoff, "Logoff")
         Me.ButtonLogoff.UseVisualStyleBackColor = False
         '
+        'AllwaysOnTopTimer
+        '
+        Me.AllwaysOnTopTimer.Enabled = True
+        Me.AllwaysOnTopTimer.Interval = 1000
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -225,4 +231,5 @@ Partial Class Form1
     Friend WithEvents ButtonChrome As Button
     Friend WithEvents ButtonRegedit As Button
     Friend WithEvents ButtonLogoff As Button
+    Friend WithEvents AllwaysOnTopTimer As Timer
 End Class
