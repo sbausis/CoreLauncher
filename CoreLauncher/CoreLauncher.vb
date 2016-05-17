@@ -1,5 +1,5 @@
-﻿Public Class Form1
-    Private Sub Form1_Load(ByVal sender As Object,
+﻿Public Class CoreLauncher
+    Private Sub CoreLauncher_Load(ByVal sender As Object,
     ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Set_Default_Settings()
         Me.Create_Buttons()
@@ -9,45 +9,55 @@
 
         Dim newBtn As ButtonSettings
 
+        newBtn = Settings.GetButton("Logout")
+        If newBtn.Name.Length <= 0 Then
+            Settings.SetButtonSettings("Logout", "C:\Windows\System32\logoff.exe", "", "C:\Windows\System32\", "icons\logoff-icon.png", "Logout", "Do you want to Logout now?", True)
+        End If
+
+        newBtn = Settings.GetButton("Reboot")
+        If newBtn.Name.Length <= 0 Then
+            Settings.SetButtonSettings("Reboot", "C:\Windows\System32\shutdown.exe", "-r -t 5", "C:\Windows\System32\", "icons\reboot-icon.png", "Reboot", "Do you want to restart the Computer?", True)
+        End If
+
         newBtn = Settings.GetButton("Mozilla Firefox")
         If newBtn.Name.Length <= 0 Then
-            Settings.SetButtonSettings("Mozilla Firefox", "C:\Program Files\FirefoxPortable\FirefoxPortable.exe", "localhost", "C:\Program Files\FirefoxPortable\", "icons\firefox-icon.png", True)
+            Settings.SetButtonSettings("Mozilla Firefox", "C:\Program Files\FirefoxPortable\FirefoxPortable.exe", "localhost", "C:\Program Files\FirefoxPortable\", "icons\firefox-icon.png", "", "", True)
         End If
 
         newBtn = Settings.GetButton("Google Chrome")
         If newBtn.Name.Length <= 0 Then
-            Settings.SetButtonSettings("Google Chrome", "C:\Program Files\GoogleChromePortable\GoogleChromePortable.exe", "localhost", "C:\Program Files\GoogleChromePortable\", "icons\chrome-icon.png", True)
+            Settings.SetButtonSettings("Google Chrome", "C:\Program Files\GoogleChromePortable\GoogleChromePortable.exe", "localhost", "C:\Program Files\GoogleChromePortable\", "icons\chrome-icon.png", "", "", True)
         End If
 
         newBtn = Settings.GetButton("Command Line")
         If newBtn.Name.Length <= 0 Then
-            Settings.SetButtonSettings("Command Line", "C:\Windows\System32\cmd.exe", "", "C:\", "icons\cmd-icon.png", True)
+            Settings.SetButtonSettings("Command Line", "C:\Windows\System32\cmd.exe", "", "C:\", "icons\cmd-icon.png", "", "", True)
         End If
 
         newBtn = Settings.GetButton("Powershell")
         If newBtn.Name.Length <= 0 Then
-            Settings.SetButtonSettings("Powershell", "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe", "", "C:\", "icons\powershell-icon.png", True)
+            Settings.SetButtonSettings("Powershell", "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe", "", "C:\", "icons\powershell-icon.png", "", "", True)
         End If
 
         newBtn = Settings.GetButton("A43 File Explorer")
         If newBtn.Name.Length <= 0 Then
-            Settings.SetButtonSettings("A43 File Explorer", "C:\Program Files (x86)\A43\A43.exe", "", "C:\", "icons\explorer-icon.png", True)
+            Settings.SetButtonSettings("A43 File Explorer", "C:\Program Files (x86)\A43\A43.exe", "", "C:\", "icons\explorer-icon.png", "", "", True)
         End If
 
         newBtn = Settings.GetButton("Task Manager")
         If newBtn.Name.Length <= 0 Then
-            Settings.SetButtonSettings("Task Manager", "C:\Windows\System32\Taskmgr.exe", "", "C:\Windows\System32\", "icons\task-manager-icon.png", True)
+            Settings.SetButtonSettings("Task Manager", "C:\Windows\System32\Taskmgr.exe", "", "C:\Windows\System32\", "icons\task-manager-icon.png", "", "", True)
         End If
 
         newBtn = Settings.GetButton("Registry Editor")
         If newBtn.Name.Length <= 0 Then
-            Settings.SetButtonSettings("Registry Editor", "C:\Windows\System32\regedt32.exe", "", "C:\Windows\System32\", "icons\regedit-icon.png", True)
+            Settings.SetButtonSettings("Registry Editor", "C:\Windows\System32\regedt32.exe", "", "C:\Windows\System32\", "icons\regedit-icon.png", "", "", True)
         End If
 
     End Sub
     Private Sub Create_Buttons()
 
-        Dim buttonCnt As Integer = 2
+        Dim buttonCnt As Integer = 1
 
         Dim dsSettings As New DataSet
         If System.IO.File.Exists(Application.ExecutablePath & ".Settings.xml") Then
@@ -93,8 +103,14 @@
 
         Me.ButtonToolTip.SetToolTip(newBtn, btn.Name)
 
-        AddHandler newBtn.Click, AddressOf ButtonHandler
+        If btn.ConfirmText.Length <= 0 Then
+            AddHandler newBtn.Click, AddressOf ButtonHandler
+        Else
+            AddHandler newBtn.Click, AddressOf ButtonHandlerConfirm
+        End If
+
         Me.Controls.Add(newBtn)
+
     End Sub
 
     Private Sub ButtonHandler(sender As Object, e As EventArgs)
@@ -108,7 +124,7 @@
             startInfo.WorkingDirectory = newBtn.Path
             Process.Start(startInfo)
         Else
-            MsgBox(newBtn.Exec & " does not exist.!. Change Path in " & Application.ExecutablePath & ".Settings.xml")
+            MsgBox(newBtn.Exec & " does Not exist.!. Change Path In " & Application.ExecutablePath & ".Settings.xml")
         End If
     End Sub
     Private Sub ButtonHandlerConfirm(sender As Object, e As EventArgs)
@@ -128,43 +144,12 @@
                 Process.Start(startInfo)
             End If
         Else
-            MsgBox(newBtn.Exec & " does not exist.!. Change Path in " & Application.ExecutablePath & ".Settings.xml")
+            MsgBox(newBtn.Exec & " does Not exist.!. Change Path In " & Application.ExecutablePath & ".Settings.xml")
         End If
     End Sub
 
     Private Sub AllwaysOnTopTimer_Tick(sender As Object, e As EventArgs) Handles AllwaysOnTopTimer.Tick
         Me.TopMost = True
-    End Sub
-
-    Private Sub ButtonLogoff_Click(sender As Object, e As EventArgs) Handles Button_Logoff.Click
-        Dim style As MsgBoxStyle
-        Dim response As MsgBoxResult
-        style = MsgBoxStyle.DefaultButton2 Or MsgBoxStyle.Critical Or MsgBoxStyle.YesNo
-        response = MsgBox("Do you want to Logout now?", style, "Logoff")
-        If response = MsgBoxResult.Yes Then
-            Dim startInfo As New ProcessStartInfo
-            startInfo.FileName = "C:\Windows\System32\logoff.exe"
-            startInfo.Arguments = ""
-            startInfo.UseShellExecute = True
-            startInfo.WorkingDirectory = "C:\Windows\System32\"
-            startInfo.CreateNoWindow = True
-            Process.Start(startInfo)
-        End If
-    End Sub
-    Private Sub ButtonReboot_Click(sender As Object, e As EventArgs) Handles Button_Reboot.Click
-        Dim style As MsgBoxStyle
-        Dim response As MsgBoxResult
-        style = MsgBoxStyle.DefaultButton2 Or MsgBoxStyle.Critical Or MsgBoxStyle.YesNo
-        response = MsgBox("Do you want to restart the Computer?", style, "Reboot")
-        If response = MsgBoxResult.Yes Then
-            Dim startInfo As New ProcessStartInfo
-            startInfo.FileName = "C:\Windows\System32\shutdown.exe"
-            startInfo.Arguments = "-r -t 5"
-            startInfo.UseShellExecute = True
-            startInfo.WorkingDirectory = "C:\Windows\System32\"
-            startInfo.CreateNoWindow = True
-            Process.Start(startInfo)
-        End If
     End Sub
 
 End Class
