@@ -60,7 +60,7 @@ Partial Class CoreLauncher
         Me.AllwaysOnTopTimer.Enabled = True
         Me.AllwaysOnTopTimer.Interval = 1000
         '
-        'Form1
+        'CoreLauncher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font

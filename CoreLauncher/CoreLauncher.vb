@@ -149,7 +149,19 @@
     End Sub
 
     Private Sub AllwaysOnTopTimer_Tick(sender As Object, e As EventArgs) Handles AllwaysOnTopTimer.Tick
-        Me.TopMost = True
+        If CoreLauncherSettings.Visible Then
+            CoreLauncherSettings.TopMost = True
+        Else
+            Me.TopMost = True
+        End If
+    End Sub
+
+    Private Sub Button_Settings_Click(sender As Object, e As EventArgs) Handles Button_Settings.Click
+        If CoreLauncherSettings.Visible Then
+            CoreLauncherSettings.Close()
+        Else
+            CoreLauncherSettings.Show()
+        End If
     End Sub
 
 End Class
